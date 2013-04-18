@@ -1,6 +1,6 @@
 package Test::DescribeMe;
 {
-  $Test::DescribeMe::VERSION = '0.002';
+  $Test::DescribeMe::VERSION = '0.003';
 }
 
 use strict;
@@ -41,7 +41,7 @@ Test::DescribeMe - Tell test runners what kind of test you are
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
