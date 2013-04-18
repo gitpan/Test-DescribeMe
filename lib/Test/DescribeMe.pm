@@ -1,6 +1,6 @@
 package Test::DescribeMe;
 {
-  $Test::DescribeMe::VERSION = '0.001';
+  $Test::DescribeMe::VERSION = '0.002';
 }
 
 use strict;
@@ -41,7 +41,7 @@ Test::DescribeMe - Tell test runners what kind of test you are
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -80,7 +80,7 @@ if you set explicit plans or tests will break!
 
 Example:
 
-  use Test::DescribeMe qw(smoker);
+  use Test::DescribeMe qw(smoke);
   use Test::More tests => 5;
 
 (Although you probably want L<Test::More/done_testing> without explicit plans).
@@ -132,11 +132,16 @@ problem with this is install tools want to say "Run all tests but don't prompt
 the user" and the only way to do that is with B<AUTOMATED_TESTING>, and so they 
 end up running the long running tests and wasting time.
 
-In order to support this, B<AUTOMATED>TESTING> will once again mean 
+In order to support the other behaviors, B<AUTOMATED_TESTING> will once again mean 
 "I am a smoker running these tests" and two new environmental variables 
 B<EXTENDED_TESTING> and B<NON_INTERACTIVE> will handle the two other cases.
 
-B<EXTENDED_TESTING> is for tests that want 
+B<EXTENDED_TESTING> is for tests that may take a long time or require special 
+configuration that is too complex for typical intalls - like requiring other 
+software for testing or internet connections.
+
+B<NON_INTERACTIVE> can be used by a build system like L<App::cpanminus> to say 
+don't run tests that require user interaction.
 
 =head1 SEE ALSO
 

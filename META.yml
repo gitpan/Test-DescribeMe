@@ -21,4 +21,4 @@ requires:
 resources:
   homepage: https://github.com/wolfsage/Test-DescribeMe
   repository: git://github.com/wolfsage/Test-DescribeMe.git
-version: 0.001
+version: 0.002
