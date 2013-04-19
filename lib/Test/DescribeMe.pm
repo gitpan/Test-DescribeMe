@@ -1,6 +1,6 @@
 package Test::DescribeMe;
 {
-  $Test::DescribeMe::VERSION = '0.003';
+  $Test::DescribeMe::VERSION = '0.004';
 }
 
 use strict;
@@ -41,7 +41,7 @@ Test::DescribeMe - Tell test runners what kind of test you are
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -134,13 +134,13 @@ end up running the long running tests and wasting time.
 
 In order to support the other behaviors, B<AUTOMATED_TESTING> will once again mean 
 "I am a smoker running these tests" and two new environmental variables 
-B<EXTENDED_TESTING> and B<NON_INTERACTIVE> will handle the two other cases.
+B<EXTENDED_TESTING> and B<NONINTERACTIVE_TESTING> will handle the two other cases.
 
 B<EXTENDED_TESTING> is for tests that may take a long time or require special 
 configuration that is too complex for typical intalls - like requiring other 
 software for testing or internet connections.
 
-B<NON_INTERACTIVE> can be used by a build system like L<App::cpanminus> to say 
+B<NONINTERACTIVE_TESTING> can be used by a build system like L<App::cpanminus> to say 
 don't run tests that require user interaction.
 
 =head1 SEE ALSO
@@ -148,6 +148,9 @@ don't run tests that require user interaction.
 L<Test::Settings> - Ask or tell when certain types of tests should be run 
 
 L<Test::Is> - Skip test in a declarative way, following the Lancaster Consensus
+
+L<https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md> -
+The Annotated Lancaster Consensus
 
 =head1 AUTHOR
 
